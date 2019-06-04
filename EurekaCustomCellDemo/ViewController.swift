@@ -7,14 +7,44 @@
 //
 
 import UIKit
+import Eureka
 
-class ViewController: UIViewController {
+class ViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupForm()
     }
 
-
+    private func setupForm() {
+        form +++ Section()
+            <<< LabelRow() {
+            $0.title = "LabelRow"
+            $0.value = "Default Value"
+            }.cellSetup({ (cell, row) in
+                cell.accessoryType = .disclosureIndicator
+            }).onCellSelection({ (cell, row) in
+                print("cell selection")
+            })
+            <<< TextRow() {
+                $0.tag = "TextRow"
+                $0.title = "TextRow"
+                $0.placeholder = "Input your message"
+                }.cellUpdate({ (cell, row) in
+                    print("cell update")
+                })
+            <<< SwitchRow() {
+                $0.tag = "SwitchValue"
+                $0.title = "SwitchRow"
+                $0.value = true
+                }.onChange({ (row) in
+                    print("value changed: \(row.value ?? false)")
+                })
+            +++ Section()
+            <<< UpdateRow() {
+                $0.value = Software(name: "My Software", updateState: .toUpdate)
+        }
+    }
+    
 }
 

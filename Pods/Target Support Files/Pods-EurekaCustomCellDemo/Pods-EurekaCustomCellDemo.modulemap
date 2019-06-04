@@ -1,0 +1,6 @@
+framework module Pods_EurekaCustomCellDemo {
+  umbrella header "Pods-EurekaCustomCellDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

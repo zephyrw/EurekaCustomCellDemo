@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,9 +12,15 @@
 		F0DC9FFB22A5FD0200459E0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DC9FF922A5FD0200459E0B /* Main.storyboard */; };
 		F0DC9FFD22A5FD0300459E0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0DC9FFC22A5FD0300459E0B /* Assets.xcassets */; };
 		F0DCA00022A5FD0300459E0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DC9FFE22A5FD0300459E0B /* LaunchScreen.storyboard */; };
+		F0DCA00922A5FE3300459E0B /* UpdateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DCA00722A5FE3300459E0B /* UpdateCell.swift */; };
+		F0DCA00A22A5FE3300459E0B /* UpdateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0DCA00822A5FE3300459E0B /* UpdateCell.xib */; };
+		F0DCA00C22A6047700459E0B /* Software.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DCA00B22A6047700459E0B /* Software.swift */; };
+		FC04D1C627713D8F7D2714F3 /* Pods_EurekaCustomCellDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32ABDF109B19D349B0BA320 /* Pods_EurekaCustomCellDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1352A73123A6D678F83B9C32 /* Pods-EurekaCustomCellDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EurekaCustomCellDemo.debug.xcconfig"; path = "Target Support Files/Pods-EurekaCustomCellDemo/Pods-EurekaCustomCellDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5D3F8330F0143EE9FABF5A26 /* Pods-EurekaCustomCellDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EurekaCustomCellDemo.release.xcconfig"; path = "Target Support Files/Pods-EurekaCustomCellDemo/Pods-EurekaCustomCellDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F0DC9FF222A5FD0200459E0B /* EurekaCustomCellDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EurekaCustomCellDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0DC9FF522A5FD0200459E0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0DC9FF722A5FD0200459E0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,10 @@
 		F0DC9FFC22A5FD0300459E0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0DC9FFF22A5FD0300459E0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0DCA00122A5FD0300459E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0DCA00722A5FE3300459E0B /* UpdateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCell.swift; sourceTree = "<group>"; };
+		F0DCA00822A5FE3300459E0B /* UpdateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateCell.xib; sourceTree = "<group>"; };
+		F0DCA00B22A6047700459E0B /* Software.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Software.swift; sourceTree = "<group>"; };
+		F32ABDF109B19D349B0BA320 /* Pods_EurekaCustomCellDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EurekaCustomCellDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC04D1C627713D8F7D2714F3 /* Pods_EurekaCustomCellDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82511F1987F9E4A3453962C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F32ABDF109B19D349B0BA320 /* Pods_EurekaCustomCellDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F0DC9FE922A5FD0200459E0B = {
 			isa = PBXGroup;
 			children = (
 				F0DC9FF422A5FD0200459E0B /* EurekaCustomCellDemo */,
 				F0DC9FF322A5FD0200459E0B /* Products */,
+				F63C9D691EDBF6BAAB203025 /* Pods */,
+				82511F1987F9E4A3453962C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +77,24 @@
 			children = (
 				F0DC9FF522A5FD0200459E0B /* AppDelegate.swift */,
 				F0DC9FF722A5FD0200459E0B /* ViewController.swift */,
+				F0DCA00B22A6047700459E0B /* Software.swift */,
+				F0DCA00722A5FE3300459E0B /* UpdateCell.swift */,
+				F0DCA00822A5FE3300459E0B /* UpdateCell.xib */,
 				F0DC9FF922A5FD0200459E0B /* Main.storyboard */,
 				F0DC9FFC22A5FD0300459E0B /* Assets.xcassets */,
 				F0DC9FFE22A5FD0300459E0B /* LaunchScreen.storyboard */,
 				F0DCA00122A5FD0300459E0B /* Info.plist */,
 			);
 			path = EurekaCustomCellDemo;
+			sourceTree = "<group>";
+		};
+		F63C9D691EDBF6BAAB203025 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1352A73123A6D678F83B9C32 /* Pods-EurekaCustomCellDemo.debug.xcconfig */,
+				5D3F8330F0143EE9FABF5A26 /* Pods-EurekaCustomCellDemo.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0DCA00422A5FD0300459E0B /* Build configuration list for PBXNativeTarget "EurekaCustomCellDemo" */;
 			buildPhases = (
+				A1A642436C754D693CA76571 /* [CP] Check Pods Manifest.lock */,
 				F0DC9FEE22A5FD0200459E0B /* Sources */,
 				F0DC9FEF22A5FD0200459E0B /* Frameworks */,
 				F0DC9FF022A5FD0200459E0B /* Resources */,
+				9C57B33DBC566BB6BCD6CA2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,18 +159,63 @@
 			files = (
 				F0DCA00022A5FD0300459E0B /* LaunchScreen.storyboard in Resources */,
 				F0DC9FFD22A5FD0300459E0B /* Assets.xcassets in Resources */,
+				F0DCA00A22A5FE3300459E0B /* UpdateCell.xib in Resources */,
 				F0DC9FFB22A5FD0200459E0B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9C57B33DBC566BB6BCD6CA2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EurekaCustomCellDemo/Pods-EurekaCustomCellDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EurekaCustomCellDemo/Pods-EurekaCustomCellDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EurekaCustomCellDemo/Pods-EurekaCustomCellDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1A642436C754D693CA76571 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EurekaCustomCellDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F0DC9FEE22A5FD0200459E0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0DCA00C22A6047700459E0B /* Software.swift in Sources */,
 				F0DC9FF822A5FD0200459E0B /* ViewController.swift in Sources */,
+				F0DCA00922A5FE3300459E0B /* UpdateCell.swift in Sources */,
 				F0DC9FF622A5FD0200459E0B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,10 +360,12 @@
 		};
 		F0DCA00522A5FD0300459E0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1352A73123A6D678F83B9C32 /* Pods-EurekaCustomCellDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EurekaCustomCellDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,10 +379,12 @@
 		};
 		F0DCA00622A5FD0300459E0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D3F8330F0143EE9FABF5A26 /* Pods-EurekaCustomCellDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EurekaCustomCellDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
