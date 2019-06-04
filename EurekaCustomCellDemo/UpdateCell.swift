@@ -18,14 +18,6 @@ final class UpdateCell: Cell<Software>, CellType {
     
     private var shapeLayer = CAShapeLayer()
     
-    required init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     override func setup() {
         
         selectionStyle = .none
@@ -83,12 +75,12 @@ final class UpdateCell: Cell<Software>, CellType {
     
     func startAni(_ seconds: TimeInterval) {
         var seconds = seconds
-        if seconds < 10 {
-            seconds += 1
-            shapeLayer.strokeEnd = CGFloat(seconds / 10.0)
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
+        if seconds < 3 {
+            seconds += 0.01
+            shapeLayer.strokeEnd = CGFloat(seconds / 3)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
                 self.startAni(seconds)
-            })
+            }
         } else {
             updateUI(.alreadyNewest)
         }

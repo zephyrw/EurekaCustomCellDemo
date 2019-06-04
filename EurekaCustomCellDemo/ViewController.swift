@@ -26,11 +26,13 @@ class ViewController: FormViewController {
             }).onCellSelection({ (cell, row) in
                 print("cell selection")
             })
-            <<< TextRow() {
-                $0.tag = "TextRow"
-                $0.title = "TextRow"
-                $0.placeholder = "Input your message"
-                }.cellUpdate({ (cell, row) in
+            <<< TextRow(tag: "TextRow")
+                .cellSetup({ (cell, row) in
+                    row.tag = "TextRow"
+                    row.title = "TextRow"
+                    row.placeholder = "Input your message"
+                })
+                .cellUpdate({ (cell, row) in
                     print("cell update")
                 })
             <<< SwitchRow() {
